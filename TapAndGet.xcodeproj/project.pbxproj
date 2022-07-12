@@ -14,6 +14,9 @@
 		65B95A45287D787400AC98A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B95A44287D787400AC98A1 /* Assets.xcassets */; };
 		65B95A48287D787400AC98A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B95A46287D787400AC98A1 /* LaunchScreen.storyboard */; };
 		65B95A50287DFABF00AC98A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B95A4F287DFABF00AC98A1 /* Constants.swift */; };
+		65B95A52287E000C00AC98A1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B95A51287E000C00AC98A1 /* ViewModel.swift */; };
+		65B95A54287E003C00AC98A1 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B95A53287E003C00AC98A1 /* Quote.swift */; };
+		65B95A5A287E009500AC98A1 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B95A59287E009500AC98A1 /* Dynamic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		65B95A47287D787400AC98A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65B95A49287D787400AC98A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65B95A4F287DFABF00AC98A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		65B95A51287E000C00AC98A1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		65B95A53287E003C00AC98A1 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		65B95A59287E009500AC98A1 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +67,56 @@
 				65B95A3B287D787300AC98A1 /* AppDelegate.swift */,
 				65B95A3D287D787300AC98A1 /* SceneDelegate.swift */,
 				65B95A4F287DFABF00AC98A1 /* Constants.swift */,
-				65B95A3F287D787300AC98A1 /* ViewController.swift */,
-				65B95A41287D787300AC98A1 /* Main.storyboard */,
-				65B95A44287D787400AC98A1 /* Assets.xcassets */,
+				65B95A55287E004700AC98A1 /* Models */,
+				65B95A57287E005B00AC98A1 /* Views */,
+				65B95A56287E005100AC98A1 /* ViewModels */,
 				65B95A46287D787400AC98A1 /* LaunchScreen.storyboard */,
+				65B95A44287D787400AC98A1 /* Assets.xcassets */,
 				65B95A49287D787400AC98A1 /* Info.plist */,
 			);
 			path = TapAndGet;
+			sourceTree = "<group>";
+		};
+		65B95A55287E004700AC98A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				65B95A53287E003C00AC98A1 /* Quote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65B95A56287E005100AC98A1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				65B95A5B287E00D000AC98A1 /* Binding */,
+				65B95A51287E000C00AC98A1 /* ViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		65B95A57287E005B00AC98A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65B95A58287E006500AC98A1 /* Storyboards */,
+				65B95A3F287D787300AC98A1 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65B95A58287E006500AC98A1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				65B95A41287D787300AC98A1 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		65B95A5B287E00D000AC98A1 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				65B95A59287E009500AC98A1 /* Dynamic.swift */,
+			);
+			path = Binding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65B95A52287E000C00AC98A1 /* ViewModel.swift in Sources */,
 				65B95A40287D787300AC98A1 /* ViewController.swift in Sources */,
 				65B95A3C287D787300AC98A1 /* AppDelegate.swift in Sources */,
+				65B95A5A287E009500AC98A1 /* Dynamic.swift in Sources */,
 				65B95A3E287D787300AC98A1 /* SceneDelegate.swift in Sources */,
+				65B95A54287E003C00AC98A1 /* Quote.swift in Sources */,
 				65B95A50287DFABF00AC98A1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
