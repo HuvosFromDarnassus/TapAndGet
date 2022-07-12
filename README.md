@@ -1,6 +1,6 @@
 # TapAndGet
 
-Just a small JSON API practice project.
+Educational project - a small JSON API practice project.
 
 ## 📸 Screenshot
 
