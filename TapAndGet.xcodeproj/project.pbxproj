@@ -70,7 +70,6 @@
 				65B95A55287E004700AC98A1 /* Models */,
 				65B95A57287E005B00AC98A1 /* Views */,
 				65B95A56287E005100AC98A1 /* ViewModels */,
-				65B95A46287D787400AC98A1 /* LaunchScreen.storyboard */,
 				65B95A44287D787400AC98A1 /* Assets.xcassets */,
 				65B95A49287D787400AC98A1 /* Info.plist */,
 			);
@@ -107,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				65B95A41287D787300AC98A1 /* Main.storyboard */,
+				65B95A46287D787400AC98A1 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";

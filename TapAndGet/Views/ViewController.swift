@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak private var label: UILabel!
     
     private let viewModel: ViewModel = ViewModel()
-
+    
     internal override func viewDidLoad() {
         super.viewDidLoad()
         
