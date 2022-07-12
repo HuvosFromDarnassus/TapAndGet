@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     var imageApiString = ""
-    let textApiString = "https://nodejs-quoteapp.herokuapp.com/quote"
     
     var imageWidth = ""
     var imageHeight = ""
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
         executeImageTask()
         executeTextTask()
     }
-
+    
     @IBAction func getRandomImageButtonPressed(_ sender: UIButton) {
         executeImageTask()
     }
@@ -51,13 +50,17 @@ class ViewController: UIViewController {
             guard let data = data else { return }
             
             DispatchQueue.main.async {
-                self.imageView.image = UIImage(data: data)
+                UIView.transition(with: self.imageView,
+                                  duration: 0.3,
+                                  options: .transitionCurlUp,
+                                  animations: { self.imageView.image = UIImage(data: data) },
+                                  completion: nil)
             }
         }.resume()
     }
     
     func executeTextTask() {
-        guard let url = URL(string: textApiString) else { return }
+        guard let url = URL(string: Constants.textApiString) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
@@ -71,7 +74,7 @@ class ViewController: UIViewController {
                 let text = try JSONDecoder().decode(RandomText.self, from: data)
                 
                 DispatchQueue.main.async {
-                    self.label.text = text.quote
+                    self.label.text = "Kanye Rest: '\(text.quote)'"
                 }
             } catch {
                 print(error)
@@ -83,7 +86,7 @@ class ViewController: UIViewController {
         imageWidth = String(format: "%.0f", imageView.bounds.width)
         imageHeight = String(format: "%.0f", imageView.bounds.height)
         
-        imageApiString = "https://picsum.photos/\(imageWidth)/\(imageHeight)"
+        imageApiString = "\(Constants.imageApiString)\(imageWidth)/\(imageHeight)"
     }
 }
 
