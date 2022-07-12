@@ -6,6 +6,8 @@
 //
 
 struct Constants {
-    static let textApiString = "https://api.kanye.rest"
-    static let imageApiString = "https://picsum.photos/"
+    static let textApiString: String = "https://api.kanye.rest"
+    static let imageApiString: String = "https://picsum.photos/"
+    
+    static let quoteAuthor: String = "Kanye Rest: "
 }
