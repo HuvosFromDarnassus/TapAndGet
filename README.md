@@ -47,10 +47,10 @@ class Dynamic<T> {
 
 ```
 class ViewModel {
-    public var quote = Dynamic("")
-    public var imageData = Dynamic(Data())
+    public var quote: Dynamic = Dynamic("")
+    public var imageData: Dynamic = Dynamic(Data())
     
-    private var imageApiString = ""
+    private var imageApiString: String = ""
     
     public func executeImageTask() {
         guard let url = URL(string: imageApiString) else { return }
@@ -81,7 +81,7 @@ class ViewModel {
             do {
                 let text = try JSONDecoder().decode(Quote.self, from: data)
                 
-                self.quote.value = "Kanye Rest: '\(text.quote)'"
+                self.quote.value = "\(Constants.quoteAuthor)'\(text.quote)'"
             } catch {
                 print(error)
             }
