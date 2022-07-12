@@ -15,13 +15,7 @@ class ViewController: UIViewController {
     
     internal override func viewDidLoad() {
         super.viewDidLoad()
-        
-        bindViewModel()
-        
-        let imageWidth = String(format: "%.0f", imageView.bounds.width)
-        let imageHeight = String(format: "%.0f", imageView.bounds.height)
-        
-        viewModel.setupUrlString(with: imageWidth, imageHeight)
+        setupViewController()
     }
     
     internal override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +47,15 @@ class ViewController: UIViewController {
                 self.label.text = quote
             }
         }
+    }
+    
+    private func setupViewController() {
+        bindViewModel()
+        
+        let imageWidth = String(format: "%.0f", imageView.bounds.width)
+        let imageHeight = String(format: "%.0f", imageView.bounds.height)
+        
+        viewModel.setupUrlString(with: imageWidth, imageHeight)
     }
 }
 
